@@ -1,7 +1,7 @@
 module global
 implicit none
 
-integer,parameter :: NX=15,NY=15
+integer,parameter :: NX=45,NY=45
 integer,parameter :: P=3 ! number of DOFs within a 1D element
 
 real,parameter :: aaaa=6371229.,a=6371229.
