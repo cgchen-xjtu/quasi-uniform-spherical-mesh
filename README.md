@@ -1,6 +1,8 @@
 # quasi-uniform-spherical-mesh
+
 Fortran codes to build quasi-uniform spherical mesh
 
+Instructions on how to use the forran codes
 
 GnomonicCubedSphereGRID.f90
 Fortran codes to build gnomonic cubed sphere 
@@ -86,39 +88,38 @@ the output file is P.dat
 
 the output file include
 
-			DO I=1,20*P*P 
-				WRITE(10,*)NODE(I,:)*RADIUS   ! the location of the vertices
-			ENDDO
+DO I=1,20*P*P 
+WRITE(10,*)NODE(I,:)*RADIUS   ! the location of the vertices
+ENDDO
       
-			DO I=1,10*P*P+2
-				WRITE(10,*)CELL(I,:)*RADIUS   ! the location of the cell barycenter
-			ENDDO
+DO I=1,10*P*P+2
+WRITE(10,*)CELL(I,:)*RADIUS   ! the location of the cell barycenter
+ENDDO
       
-			DO I=1,30*P*P 
-				WRITE(10,*)NODE_ONLINE(I,:)*RADIUS   ! the location of the midpoint of line 
-			ENDDO
+DO I=1,30*P*P 
+WRITE(10,*)NODE_ONLINE(I,:)*RADIUS   ! the location of the midpoint of line 
+ENDDO
 
-			DO I=1,10*P*P+2
-				WRITE(10,*)CELL_NODES(I,:)    ! the indices of vertices belonging to a cell
-			ENDDO
+DO I=1,10*P*P+2
+WRITE(10,*)CELL_NODES(I,:)    ! the indices of the vertices belonging to a cell
+ENDDO
       
-			DO I=1,10*P*P+2
-				WRITE(10,*)CELL_LINES(I,:)    ! the indices of lines belonging to a cell
-			ENDDO
+DO I=1,10*P*P+2
+WRITE(10,*)CELL_LINES(I,:)    ! the indices of the lines belonging to a cell
+ENDDO
 
-			DO I=1,20*P*P
-				WRITE(10,*)NODE_CELLS(I,:)    ! the indices of cells sharing a vertex
-			ENDDO
+DO I=1,20*P*P
+WRITE(10,*)NODE_CELLS(I,:)    ! the indices of the cells sharing a vertex
+ENDDO
 
-			DO I=1,20*P*P
-				WRITE(10,*)NODE_NODES(I,:)    ! the indices of lines belonging to a cell
-			ENDDO
+DO I=1,20*P*P
+WRITE(10,*)NODE_NODES(I,:)    ! the indices of 3 vertics sourrounding a vertex, belonging to the same line
+ENDDO
 
-			DO I=1,30*P*P
-				WRITE(10,*)LINE_NODES(I,:)    ! the indices of lines belonging to a cell
-			ENDDO
+DO I=1,30*P*P
+WRITE(10,*)LINE_NODES(I,:)    ! the indices of 2 vertices belonging to a line
+ENDDO
       
-			DO I=1,30*P*P
-				WRITE(10,*)LINE_CELLS(I,:)    ! the indices of 2 cells sharing a line
-			ENDDO
-
+DO I=1,30*P*P
+WRITE(10,*)LINE_CELLS(I,:)    ! the indices of 2 cells sharing a line
+ENDDO
