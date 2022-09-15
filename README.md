@@ -86,7 +86,7 @@ No. of cells : 10*P*P+2
 
 the output file is P.dat
 
-the output file include
+the output file includes
 
 DO I=1,20*P*P 
 WRITE(10,*)NODE(I,:)*RADIUS   ! the location of the vertices
